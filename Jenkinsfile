@@ -1,6 +1,6 @@
 pipeline {
   
-  agent { label 'linux' }
+  agent any
    
   tools {
 
@@ -10,7 +10,7 @@ pipeline {
          
       stage ('clone the repo') {
            steps {
-                  git 'https://github.com/bhalla008/spring-petclinic.git'
+                  git 'https://github.com/varuntiwari91/spring-petclinic.git'
                 }
          }
       stage ('Build') {

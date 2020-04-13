@@ -29,8 +29,10 @@ pipeline {
                 }  
          }
       stage ("Deploy to Production"){
+        
             steps {
-                  sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+        
+              sh  "sudo cp /var/lib/jenkins/workspace/mavenpipeline-bv/target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /opt/tomcat/webapps"
 }
 
       }

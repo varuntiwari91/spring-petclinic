@@ -31,7 +31,7 @@ pipeline {
       stage ("Deploy to Production"){
         
             steps {
-                    sh "sudo cp /var/lib/jenkins/workspace/mavenpipeline-bv/target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /opt/tomcat/webapps"
+                    sh "cp /var/lib/jenkins/workspace/mavenpipeline-bv/target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /opt/tomcat/webapps"
 }
 
       }

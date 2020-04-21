@@ -31,7 +31,7 @@ pipeline {
       stage ("Deploy to Production"){
         
             steps {
-                    sh "scp /var/lib/jenkins/workspace/mavenpipeline-bv/target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar ubuntu@13.233.76.212:/opt/tomcat/webapps"
+                    sh "scp /var/lib/jenkins/workspace/mavenpipeline-bv/target/*.jar ubuntu@13.233.84.220:/tmp"
 }
 
       }
